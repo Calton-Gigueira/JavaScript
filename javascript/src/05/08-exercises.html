@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <script>
+        // 8a
+        const product = {
+            name: 'Baskettball',
+            price: 2095
+        };
+
+        console.log(`Name: ${product.name}\nPrice: ${product.price}`);
+
+        // 8b
+        product.price += 500;
+        console.log(product['price']);
+
+        // 8c
+        product['delivery-time'] = '3 days';
+        console.log(product['delivery-time']);
+
+        // 8d 
+        const product1 = {
+            name: 'shirt',
+            price: 20
+        };
+
+        const product2 = {
+            name: 'shoes',
+            price: 50
+        };
+
+        function comparePrice(product1, product2) {
+            if (product1.price > product2.price) {
+                return product1.price;
+            }
+            return product2.price;
+        }
+
+        console.log(comparePrice(product1, product2));
+
+        // 8e
+        function isSameProduct(product1, product2) {
+            if (product1.name === product2.name && 
+                product1.price === product2.price) {
+                return true;
+            }
+            return false;
+        }
+
+        console.log(isSameProduct(product1, product2));
+
+        // 8f
+        console.log('Good morning!'.toLowerCase());
+
+        // 8g
+        console.log('test'.repeat(2))
+
+        // 8h
+         let calculation = localStorage.getItem('calculation') || '';
+
+        function updateCalculation(value) {
+            calculation += value;
+            console.log(calculation);
+            localStorage.setItem('calculation', calculation);
+        }
+        /*
+        function saveCalculation() {
+            localStorage.setItem('calculation', calculation);
+        }
+        */
+
+        // 8i
+        function playGame(guess) {
+            const randomNumber = Math.random();
+            const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+            console.log(guess === result ? 'You win!' : 'You lose!');
+        }
+
+        
+    </script>
+</body>
+</html>
