@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <script>
+        /* 11a
+        const nums = [10, 20, 30];
+        console.log(nums);
+        nums[2] = 99;
+        console.log(nums);
+        */
+
+        /* 11b
+        const values = [1, 20, 22, 24, 5];
+        const greetings = ['hi', 'hello', 'good'];
+        function getLastValue(array) {
+            return array[array.length - 1];
+        }
+        console.log(getLastValue(values));
+        console.log(getLastValue(greetings));
+        */
+
+        /* 11c
+        function arraySwap(array) {
+            array[0] = array[array.length - 1];
+            array[array.length - 1] = array[0];
+            console.log(array);
+        }
+        arraySwap(values);
+        arraySwap(greetings);
+        */
+
+        /* 11d
+        for (let i = 0; i < 11; i++) {
+            console.log(i);
+        }
+        */
+
+        /* 11e
+        for (let i = 5; i >= 0; i--) {
+            console.log(i);
+        }
+        */
+
+        /* 11f
+        let i = 0;
+        while (i < 11) {
+            console.log(i);
+            i++;
+        }
+
+        let j = 5;
+        while (j >= 0) {
+            console.log(j);
+            j--;
+        }
+        */
+
+        /* 11g
+        const nums = [1, 2, 3, 4];
+        const doubledNums = [];
+        for (let i = 0; i < nums.length; i++) {
+            doubledNums[i] = nums[i] + 1;
+        }
+        console.log(nums);
+        console.log(doubledNums);
+        */
+
+        /* 11h
+        const nums = [1, 2, 3, 4];
+        const numbers = [-2, -1, 0, 99];
+        
+        function addOne(array) {
+            const doubledNums = [];
+            for (let i = 0; i < array.length; i++) {
+                doubledNums[i] = nums[i] += 1;
+            }
+            return doubledNums;
+        }
+
+        console.log(addOne(nums));
+        console.log(addOne(numbers));
+        */
+
+        /* 11i 
+        const nums = [1, 2, 3, 4];
+        const numbers = [-2, -1, 0, 99];
+        
+        function addNum(array, num) {
+            for (let i = 0; i < array.length; i++) {
+                array[i] += num;
+            }
+            
+            return array;
+        }
+        console.log(addNum(nums, 2));
+        console.log(addNum(numbers, 2));
+        */
+
+        /* 11j
+        const nums = [1, 2, 3, 4];
+        const numbers = [-2, -1, 0, 99];
+
+        function addArrays(array1, array2) {
+            const newArray = [];
+            for (let i = 0; i < array1.length; i++) {
+                newArray[i] = array1[i] + array2[i];
+            }
+            return newArray;
+        }
+        console.log(addArrays(nums, numbers));
+        */
+
+        /* 11k
+        const numbers = [-2, -1, 0, 99, 7];
+
+        function countPositive(array) {
+            let count = 0;
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > 0) {
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        console.log(countPositive(numbers));
+        */
+
+        /* 11l
+        const numbers = [-2, -1, 0, 7, 99];
+
+        function minMax(array) {
+            let min = -500;
+            let max = 500;
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] < max) {
+                    max = array[i];
+                } else {
+                    min = array[i];
+                }   
+            }
+            
+            return `Min: ${min}\nMax: ${max}`;
+        }
+
+        console.log(minMax(numbers));
+        */
+
+        /* 11m
+        const n = [];
+        function minMax(array) {
+            let min = -500;
+            let max = 500;
+
+            for (let i = 0; i < array.length; i++) {
+                if (array.length = 0) {
+                    min = null;
+                    max = null;
+                } else if (array.length = 1) {
+                    min = array[0];
+                    max = array[0];
+                } else if (array.length > 2) {
+                    if (array[i] < max) {
+                        max = array[i];
+                    } else {
+                        min = array[i];
+                    }
+                }
+            }
+
+            return `Min: ${min}\nMax: ${max}`;
+        }
+
+        console.log(minMax(n));
+        */
+
+        // 11n
+        const words = ['apple', 'apple', 'grape', 'apple'];
+
+        function countWords(array) {
+            
+        }
+    </script>
+</body>
+</html>
