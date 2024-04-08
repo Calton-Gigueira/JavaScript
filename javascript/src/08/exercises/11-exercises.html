@@ -153,39 +153,52 @@
         */
 
         /* 11m
-        const n = [];
-        function minMax(array) {
-            let min = -500;
-            let max = 500;
+        function minMax(nums) {
+            const result = {
+                min: null,
+                max: null
+            };
 
-            for (let i = 0; i < array.length; i++) {
-                if (array.length = 0) {
-                    min = null;
-                    max = null;
-                } else if (array.length = 1) {
-                    min = array[0];
-                    max = array[0];
-                } else if (array.length > 2) {
-                    if (array[i] < max) {
-                        max = array[i];
-                    } else {
-                        min = array[i];
-                    }
+            for (let i = 0; i < nums.length; i++) {
+                const value = nums[i];
+
+                if (result.min === null || value < result.min) {
+                    result.min = value;
+                }
+
+                if (result.max === null || value > result.max) {
+                    result.max = value;
                 }
             }
 
-            return `Min: ${min}\nMax: ${max}`;
+            return result;
         }
 
-        console.log(minMax(n));
+        console.log(minMax([1, -3, 5]));
+        console.log(minMax([-2, 3, -5, 7, 10]));
+
+        console.log(minMax([]));
+        console.log(minMax([3]));
         */
 
         // 11n
-        const words = ['apple', 'apple', 'grape', 'apple'];
+        function countWords(words) {
+            const result = {};
 
-        function countWords(array) {
-            
+            for (let i = 0; i < words.length; i++) {
+                const word = words[i];
+
+                if (!result[word]) {
+                    result[word] = 1;
+                } else {
+                    result[word]++;
+                }
+            }
+
+            return result;
         }
+
+        console.log(countWords(['apple', 'grape', 'apple', 'apple']));
     </script>
 </body>
 </html>
