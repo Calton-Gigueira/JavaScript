@@ -19,15 +19,23 @@ if (!score) {
 let isAutoPlaying = false;
 let intervalId;
 
+const autoPlayElement = document.querySelector('.js-auto-play-button');
+
+autoPlayElement.addEventListener('click', () => {
+    autoPlay();
+});
+
 function autoPlay() {
     if (!isAutoPlaying) {
         intervalId = setInterval(() => {
             const playerMove = pickComputerMove();
             playGame(playerMove);
+            autoPlayElement.innerHTML = 'Stop Playing';
         }, 1000);
         isAutoPlaying = true;
     } else {
         clearInterval(intervalId);
+        autoPlayElement.innerHTML = 'Auto Play';
         isAutoPlaying = false;
     }
 }
@@ -54,8 +62,43 @@ document.body.addEventListener('keydown', (event) => {
         playGame('paper');
     } else if (event.key === 's') {
         playGame('scissors');
+    } else if (event.key === 'a') {
+        autoPlay();
+    } else if (event.key === 'Backspace') {
+        resetScore();
     }
 });
+
+const resetScoreElement = document.querySelector('.js-reset-score-button');
+    
+resetScoreElement.addEventListener('click', () => {
+    document.querySelector('.js-section').classList.remove('desappear');
+    resetScore();
+});
+
+function resetScore() {
+    let sectionHTML = '';
+    const html = `<section>
+    Are you sure you want to reset the score?
+    <button onclick="confirm()">Yes</button>
+    <button onclick="
+        document.querySelector('.js-section').classList.add('desappear');
+    ">No</button>
+    </section>`;
+
+    sectionHTML += html;
+
+    document.querySelector('.js-section').innerHTML = sectionHTML;
+}
+
+function confirm() {
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    updateScoreElement();
+    document.querySelector('.js-section').classList.add('desappear');
+}
 
 function playGame(playerMove) {
     const computerMove = pickComputerMove();

@@ -29,10 +29,24 @@ body {
 }
 
 .reset-score-button,
-.auto-play-button {
+.auto-play-button,
+section button {
     background-color: #fff;
     border: none;
     font-size: 15px;
     padding: 8px 15px;
     cursor: pointer;
 }
+
+section {
+    margin-top: 15px;
+}
+
+section button {
+    margin-left: 5px;
+}
+
+.desappear {
+    display: none;
+}
+
