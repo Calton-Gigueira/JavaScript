@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <button onclick="increase();">Add</button>
+    <button onclick="decrease();">Remove</button>
+
+    <script>
+        let messages = 0;
+        setInterval(function() {
+            document.title = `(${messages}) New Messages`;
+
+            if (messages === 0) {
+                document.title = `App`;
+            }
+        }, 1000);
+
+        function increase() {
+            messages++;
+            document.title = `(${messages}) New Messages`;
+
+        }
+
+        function decrease() {
+            messages--;
+            document.title = `(${messages}) New Messages`;
+        }
+    </script>
+</body>
+</html>

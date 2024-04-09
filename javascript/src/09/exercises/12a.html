@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <button id="click-button" onclick="
+        setTimeout(function() {
+            document.querySelector('#click-button').innerHTML = 'Finished';
+        }, 1000);
+    ">Start</button>
+    <script>
+        const add = function() {
+            console.log(2 + 3);
+        };
+
+        add();
+        add();
+
+        // 12b
+        function runTwice(fun) {
+            fun();
+        }
+
+        runTwice(add);
+        runTwice(add);
+
+        // 12c
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+</head>
+<body>
+    <button id="start-button" onclick="
+            const startElement = document.querySelector('#start-button');
+            startElement.innerHTML = 'Loading...';
+            setTimeout(function() {
+                startElement.innerHTML = 'Finished';
+            }, 1000);
+        ">Start</button><br><br>
+
+        <button id="add-button" onclick="
+            setTimeout(function() {
+                let addElement = document.querySelector('#add-button');
+                const p = `<p>Added</p>`;
+                addElement += p;
+            }, 2000);
+        ">Add to cart</button>
+
+    <script>
+    </script>
+</body>
+</html>
