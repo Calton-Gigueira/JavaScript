@@ -62,7 +62,7 @@ productsGrid.innerHTML = productsHTML;
 
 const addToCartButton = document.querySelectorAll('.js-add-to-cart');
 
-function updateCartQuantity() {
+export function updateCartQuantity() {
     let cartQuantity = 0;
 
     cart.forEach((cartItem) => {
