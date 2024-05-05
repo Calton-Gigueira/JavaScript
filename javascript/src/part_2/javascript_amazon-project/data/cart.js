@@ -1,4 +1,4 @@
-import { deliveryOptions } from "./deliveryOptions";
+import { deliveryOptions } from "./deliveryOptions.js";
 
 export let cart;
 
